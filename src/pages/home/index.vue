@@ -5,10 +5,10 @@
         <img src="../../assets/img/icon_logo.png" class="logo">
         <a class="getmonkey">GET $MONKEY</a>
         <ul class="menulist">
-          <li class="active"><a>WHY MONKEY </a></li>
-          <li><a>HOW TO GET </a></li>
-          <li><a>TOKENOMICS </a></li>
-          <li><a> MOONMAP</a></li>
+          <li :class="active==0?'active':''" @click="active=0"><a>WHY MONKEY </a></li>
+          <li :class="active==1?'active':''" @click="active=1"><a>HOW TO GET </a></li>
+          <li :class="active==2?'active':''" @click="active=2"><a>TOKENOMICS </a></li>
+          <li :class="active==3?'active':''" @click="active=3"><a> MOONMAP</a></li>
         </ul>
       </header>
       <div class="bannerbox">
@@ -45,11 +45,11 @@
         <h2>100 Quadrilion</h2>
         <p>TOTAL SUPPLY</p>
         <h2>178,000+</h2>
-        <p>HOLDERS</p>
+        <!-- <p>HOLDERS</p>
         <h2>$0.140 Billion</h2>
         <p>MARKET CAP</p>
         <h2>$0.0000000014</h2>
-        <p>CURRENT PRICE</p>
+        <p>CURRENT PRICE</p> -->
       </div>
       <div style="text-align:center;margin-top:95px"><img src="../../assets/img/img8.png"></div>
       <div class="phasebox">
@@ -75,7 +75,7 @@
         <div class="phaseitem" style="width:460px">
           <h2>PHASE 3 Expansion</h2>
           <p>MONKEY Swap (Decentralize Exchange) <br>
-            Initial CEX Listings (Hotbit, Bilaxy, CoinTiger) <br>
+            Initial CEX Listings (MXC,KuCoin) <br>
             15,000 Telegram Members <br>
             30,000 Holders</p>
         </div>
@@ -114,7 +114,7 @@ export default {
   },
   data() {
     return {
-      
+      active:0
     }
   },
   mounted() {
